@@ -362,4 +362,3 @@
 (setq js-indent-level 2)
 
 ;; start emacs server
-(server-start)
