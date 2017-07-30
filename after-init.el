@@ -65,10 +65,15 @@
              (local-set-key (kbd "RET") 'newline-and-indent)))
 
 ;; Create my C/C++ personal style.
+(require 'doxymacs)
+(require 'filladapt)
 (defun my-cc-mode-hook ()
   (flyspell-prog-mode)
   (setq c-basic-offset 2)
-  (define-key c-mode-base-map "\C-m" 'newline-and-indent))
+  (define-key c-mode-base-map "\C-m" 'newline-and-indent)
+  (c-setup-filladapt)
+  (filladapt-mode 1)
+  (doxymacs-mode))
 (add-hook 'c-mode-common-hook 'my-cc-mode-hook)
 
 (defun my-c++-mode-hook ()
