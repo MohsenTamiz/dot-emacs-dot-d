@@ -81,6 +81,13 @@
   (c-set-offset 'innamespace 0))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
+(defun change_to_camel_case ()
+  (interactive)
+  (progn (replace-regexp "\\([A-Z]\\)" "_\\1" nil (region-beginning) (region-end))
+         (downcase-region (region-beginning) (region-end)))
+  )
+
+
 ;; Some workarounds for C++11 code. From this Stack Overflow answer:
 ;; http://stackoverflow.com/a/12934513/363949
 (require 'font-lock)
