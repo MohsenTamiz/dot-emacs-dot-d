@@ -358,5 +358,8 @@
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file 'noerror)
 
+;;; Javascript Mode
+(setq js-indent-level 2)
+
 ;; start emacs server
 (server-start)
