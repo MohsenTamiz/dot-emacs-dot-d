@@ -1,9 +1,5 @@
 ;;; -*-  indent-tabs-mode: nil;  -*-
 
-;;; themes ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(load-theme 'zenburn t)
-
 ;;; fullscreen support ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; toggle full-screen mode
@@ -34,9 +30,6 @@
 (when window-system
   (tool-bar-mode 0)
   (scroll-bar-mode 0))
-
-;; disable highlighted region selection.
-(transient-mark-mode 0)
 
 ;; disable startup message
 (setq inhibit-startup-message t)
